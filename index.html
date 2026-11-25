@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#151515" />
+  <meta name="description" content="Photographer digital business card and social links." />
+  <title>Photographer | Social Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #151515; --panel: #202020; --row: #333333; --text: #f5f2ec; --muted: #b8b2a8; --accent: #c5a46d; }
+    body {
+      min-height: 100vh; min-height: 100svh; padding: 34px 18px;
+      display: grid; place-items: center; background: var(--bg); color: var(--text);
+      font-family: "DM Sans", sans-serif;
+    }
+    .social-card {
+      width: min(100%, 770px); min-height: 850px; padding: 44px clamp(22px, 8vw, 92px) 48px;
+      border-radius: 34px; background: var(--panel); display: flex; flex-direction: column;
+      align-items: center; text-align: center;
+    }
+    .portrait {
+      width: 164px; height: 164px; border-radius: 50%; overflow: hidden;
+      border: 3px solid rgba(197,164,109,.8); padding: 4px; margin: 0 auto 28px;
+    }
+    .portrait img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
+    .eyebrow { color: var(--accent); font-size: 10px; letter-spacing: 3px; margin-bottom: 12px; }
+    h1 { font: 500 clamp(42px, 7vw, 58px)/1.1 "Playfair Display", serif; }
+    .location { margin-top: 12px; color: var(--accent); font: 500 clamp(20px, 3.5vw, 27px) "Playfair Display", serif; }
+    .role { margin-top: 30px; color: var(--muted); font: 500 12px "DM Sans", sans-serif; letter-spacing: 4px; text-transform: uppercase; }
+    .links { width: 100%; display: grid; gap: 16px; margin-top: 68px; }
+    .link-row {
+      min-height: 76px; padding: 16px 22px; border-radius: 17px; background: var(--row);
+      display: flex; align-items: center; justify-content: center; gap: 14px;
+      color: var(--text); font: 600 clamp(19px, 3.5vw, 27px) "Playfair Display", serif;
+      text-decoration: none; transition: background .2s ease, transform .2s ease;
+    }
+    .link-row:hover { background: #414141; transform: translateY(-2px); }
+    .link-row .arrow { color: var(--accent); font: 18px "DM Sans", sans-serif; }
+    .phone { margin-top: 25px; color: var(--muted); font-size: 15px; letter-spacing: 1px; text-decoration: none; }
+    .footer-note { margin-top: auto; padding-top: 45px; color: #77736c; font-size: 9px; letter-spacing: 2.5px; }
+    @media (max-width: 520px) {
+      body { padding: 14px 10px; }
+      .social-card { min-height: calc(100svh - 28px); border-radius: 25px; padding: 38px 22px 30px; }
+      .portrait { width: 138px; height: 138px; margin-bottom: 24px; }
+      .role { letter-spacing: 2.5px; font-size: 10px; }
+      .links { margin-top: 48px; gap: 13px; }
+      .link-row { min-height: 65px; border-radius: 14px; }
+      .footer-note { padding-top: 35px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="social-card">
+    <!-- Replace this sample portrait with the photographer's own photo -->
+    <div class="portrait">
+      <img src="img/photo_2026-11-26_01-27-18.jpg" alt="Photographer portrait">
+    </div>
+
+    <p class="eyebrow">PHOTOGRAPHER</p>
+    <h1>Your Name</h1>
+    <p class="location">Beni Suef, Egypt</p>
+    <p class="role">Photographer &amp; Visual Storyteller</p>
+
+    <nav class="links" aria-label="Contact and social media links">
+      <a class="link-row" href="https://drive.google.com/file/d/18rhuXE0sPDLPZ7jIBbCYqVx93mgMp1nx/view?usp=drivesdk" target="_blank" rel="noopener">Menu <span class="arrow">↗</span></a>
+      <a class="link-row" href="tel:01145456459">Call Me <span class="arrow">↗</span></a>
+      <a class="link-row" href="https://wa.me/201093204372" target="_blank" rel="noopener">WhatsApp <span class="arrow">↗</span></a>
+      <!-- Replace # with the photographer's actual profile links -->
+      <a class="link-row" href="https://www.instagram.com/wamby_kraeb?igsi=ZmNraGloZGE4a3d6" target="_blank" rel="noopener">Instagram <span class="arrow">↗</span></a>
+      <a class="link-row" href="https://tr.ee/y22HNKw4Af" target="_blank" rel="noopener">Facebook <span class="arrow">↗</span></a>
+      <a class="link-row" href="https://www.tiktok.com/@radwanmos0?_r=1&_t=ZS-9BiAAhMG3Ge" target="_blank" rel="noopener">TikTok <span class="arrow">↗</span></a>
+    </nav>
+
+    <a class="phone" href="tel:+201093204372">+20 109 320 4372</a>
+    <p class="footer-note">TAP · CONNECT · KEEP IN TOUCH</p>
+  </main>
+</body>
+</html>
